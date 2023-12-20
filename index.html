@@ -32,6 +32,8 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet"
     />
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <!-- 구글아이콘 -->
     <!-- icons -->
     <link
@@ -54,15 +56,119 @@
     
 </head>
 <body>
-    <a href="#">가나다</a>
-    <div class="slide">
-        <ul>
-            <li><a href="#">하이하이하이하이하이하이</a></li>
-        </ul>
+    <div id="u-skip">
+        <!-- 웹접근성, 꼭 있어야 함 -->
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#main">본문 바로가기</a>
     </div>
+    <div class="wrap">
+        <header id="header">
+            <div class="inner">
+                <h1 id="logo" class="logo">
+                    <a href="#">logo</a>
+                </h1>
+                <div class="col-right">
+                    <!-- gnb -->
+                    <div class="gnb-wrap">
+                        <input type="checkbox" name="gnbNav" id="gnbNav" class="input-burger">
+                        <label for="gnbNav">
+                            <div class="blind">전체 메뉴 보기</div>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </label>
+                        <nav id="gnb">전체메뉴
+                            <ul>
+                                
+                            </ul>
+                        </nav>
+                    </div>
 
-    <div class="card">
-        <span>카드카드</span>
+                    <!-- util -->
+                    <div class="util">
+                        <ul>
+                            <li><a href="#" class="link-g link-lang">
+                                    <span class="blind">language</span>
+                                </a>
+                            </li>
+                            <li><a href="#" class="link-g link-search">
+                                    <span class="blind">search</span>
+                                </a>
+                            </li>
+                            <li><a href="#" class="link-g link-mypg">
+                                    <span class="blind">mypage</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        
+         <!-- 메인 -->
+        <main id="main">
+            <!-- 배너 슬라이드, 스와이퍼 -->
+            <div class="inner">
+                <swiper-container
+                class="slide-intro" pagination="true"
+                pagination-clickable="true"
+                navigation="true"
+                space-between="30"
+                loop="true"
+            >
+                    <swiper-slide>Slide 1</swiper-slide>
+                    <swiper-slide>Slide 2</swiper-slide>
+                    <swiper-slide>Slide 3</swiper-slide>
+                    <swiper-slide>Slide 4</swiper-slide>
+                    <swiper-slide>Slide 5</swiper-slide>
+                    <swiper-slide>Slide 6</swiper-slide>
+                    <swiper-slide>Slide 7</swiper-slide>
+                    <swiper-slide>Slide 8</swiper-slide>
+                    <swiper-slide>Slide 9</swiper-slide>
+                </swiper-container>
+            </div>
+           
+            <section class="sec-g sec-best">
+                <div class="inner">
+                    <h2 class="sec tit">Best item</h2>
+                    <div class="sec-cont">
+                        <div class="inner">
+                            <swiper-container
+                                class="slide-best" pagination="true"
+                                pagination-clickable="true"
+                                navigation="true"
+                                space-between="30"
+                                loop="true"
+                            >
+                                <swiper-slide>Slide 1</swiper-slide>
+                                <swiper-slide>Slide 2</swiper-slide>
+                                <swiper-slide>Slide 3</swiper-slide>
+                                <swiper-slide>Slide 4</swiper-slide>
+                                <swiper-slide>Slide 5</swiper-slide>
+                                <swiper-slide>Slide 6</swiper-slide>
+                                <swiper-slide>Slide 7</swiper-slide>
+                                <swiper-slide>Slide 8</swiper-slide>
+                                <swiper-slide>Slide 9</swiper-slide>
+                            </swiper-container>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <h1 class="logo">
+                <a href="#">logo</a>
+            </h1>
+            <div class="sns">
+                <a href="#">instagram</a>
+                <a href="#">youtybe</a>
+                <a href="#">blog</a>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
     </div>
 </body>
 </html>

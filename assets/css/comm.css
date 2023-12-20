@@ -280,25 +280,64 @@ legend {
   content: "";
 }
 
-.slide li {
-  height: 300px;
-}
-.slide li a {
-  display: block;
-  height: 100%;
-  color: #F44336;
+.wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.card {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  border: 3px solid #F44336;
-  background-color: #fff;
+#header {
+  height: 70px;
+  background: #757575;
 }
-.card span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+#main {
+  min-height: calc(100vh - 70px - 70px);
+}
+
+#footer {
+  height: 70px;
+}
+
+#header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+#header .col-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#header .util ul {
+  display: flex;
+}
+#header .util a {
+  display: block;
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+#header .link-g {
+  display: flex;
+  align-items: center;
+  height: 70px;
+}
+#header .link-g::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+#header .link-lang::before {
+  content: "\f0ac";
+}
+#header .link-search::before {
+  content: "\f002";
+}
+#header .link-mypg::before {
+  content: "\f007";
+}
+
+.slide-intro swiper-slide {
+  height: 300px;
+  background: #36c5f4;
 }/*# sourceMappingURL=comm.css.map */

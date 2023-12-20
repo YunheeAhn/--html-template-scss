@@ -9,18 +9,30 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-  }
+}
   
-  @mixin posY {
+@mixin posY {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-  }
+}  
   
-  @mixin posXY {
+@mixin posXY {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-  
+}
+
+@mixin flex($justify: space-between, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;    
+}
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+  // @mixin 변수값 { 설정 내용들 ;}
