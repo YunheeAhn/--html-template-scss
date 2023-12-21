@@ -9,6 +9,11 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    .inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 }
 #header {
     height: $hd-height;
@@ -20,6 +25,16 @@
 #footer {
     // 하단고정
     height: $ft-height;
+}
+
+// 미디어쿼리
+@media screen and (min-width:1280px) {
+    .wrap {
+        .inner {
+            padding:0
+        }
+    }
+    
 }
 
 // header detail
@@ -49,24 +64,127 @@
         height: $hd-height;
         &::before {
             font-family: "Font Awesome 6 Free";
-            font-weight: 900;
+            font-weight: 900;            
         }
     }
     .link-lang {
         &::before {
             content: "\f0ac";
+            margin-right: 5px;
+
         }
     }
     .link-search {
         &::before {
             content: "\f002";
+            margin-right: 5px;
+
         }
     }
     .link-mypg {
         &::before {
             content: "\f007";
+            margin-right: 5px;
+
         }
     }
+}
+
+#logo {
+    position: relative;
+    z-index: 1100;
+}
+
+// gnb
+.gnb-wrap {
+    .input-burger {
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 0;
+        // height: 0;
+        // border: none;
+        // opacity: 0;
+
+        // 윤희코딩
+        opacity: 0;
+
+        &:checked {
+            // input이 체크가 되면
+            & + .label-burger {
+                // 형제 선택자 : & + .선택자(바로 내 아래 형제만 선택 가능)
+                .bar {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+                    &:nth-child(1) {
+                        transform: translateY(3px) rotate(45deg);
+                    }
+                    &:nth-child(3) {
+                        transform: translateY(-2px) rotate(-45deg);
+                    }
+                }
+
+                // 윤희 코딩
+                // .bar:nth-child(1) {
+                //     transform: rotate(45deg);
+                //     transform-origin: center;
+                // }
+                // .bar:nth-child(2) {
+                //     display: none;
+                // }   
+                // .bar:nth-child(3) {
+                //     transform: rotate(-45deg);
+                //     transform-origin: 3px 0;
+                // }
+            }
+
+            & ~ #gnb {
+                left: 0;
+
+                transition: all 0.9s;
+            }
+
+        }
+    }
+    // input이 체크 안 됐을 때
+    .label-burger {   
+        position: relative;
+        z-index: 1100;
+
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        .bar{
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: $primary;
+
+            transition: all 0.3s;
+         }
+    }
+}
+#gnb {
+    // display: none;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+    text-align: center;
+    background: $white;
+
+    position: fixed;
+    top: 0;
+    left: 100%;
+    bottom: 0;
+
+    transition: all 0.9s;
+
+    z-index: 1000;
 }
 
 // footer detail

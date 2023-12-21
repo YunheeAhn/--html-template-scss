@@ -8,3 +8,6 @@ Default SCSS template settings
 : Add default scss templates
 : #u-skip settings
 : scss #main practice
+
+2023-12-21
+: gnb, header(-input box) -> set transition
